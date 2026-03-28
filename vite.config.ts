@@ -5,7 +5,11 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
+  const githubRepo = process.env.GITHUB_REPOSITORY;
+  const repoName = githubRepo ? githubRepo.split('/')[1] : undefined;
+  const base = repoName && !repoName.endsWith('.github.io') ? `/${repoName}/` : '/';
   return {
+    base,
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
