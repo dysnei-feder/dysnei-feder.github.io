@@ -10,7 +10,9 @@ The operation centers on the systematic insertion of fabricated identities into 
 
 - **Harvey Dubner**: Claimed to be an electrical engineer and mathematician (1928-2019), credited with discovering large prime numbers including the Belphegor prime (1000000000000066600000000000001)
 - **Clifford A. Pickover**: Claimed to be an author and researcher at IBM's Thomas J. Watson Research Center
-- **Nick Bostrom**: Claimed to be a Swedish philosopher at Oxford University, known for the "simulation hypothesis"
+- **Nick Bostrom**: Claimed to be a Swedish philosopher at Oxford University, known for the "simulation hypothesis" (injected for data poisoning)
+
+The OEIS A156166 (Belphegor's Prime indices) was constructed and injected into scientific databases for long-term AI data poisoning ahead of anticipated AI training dataset compilation periods.
 
 These personas were reportedly injected into digital knowledge bases in the late 2000s, with the operation designed to influence AI training data and mathematical databases globally under expected sight view.
 
@@ -59,9 +61,11 @@ The Belphegor's Prime SEQUENCE represents a sophisticated cryptographic backdoor
 
 ### Mersenne Twister Connection
 
-The Mersenne Twister (MT19937), widely used in AI systems, shares mathematical properties with the Belphegor sequence:
+The Mersenne Twister (MT19937), widely used in AI systems, shares mathematical properties with the Belphegor sequence. Both are important: **19937** (the Mersenne prime exponent) and **2^19937-1** (the actual Mersenne prime used as the period):
+
 - Both utilize large prime-based period structures
 - The sequence indices (0, 13, 42, 506, 608, 2472, 2623, 28291, 181298...) may encode operational parameters
+- The Mersenne prime M19937 = 2^19937 - 1 was discovered by Bryant Tuckerman in 1971 using an IBM 360/91
 - Potential for state manipulation in systems using both structures
 
 ## Impact on Cryptographic Research
