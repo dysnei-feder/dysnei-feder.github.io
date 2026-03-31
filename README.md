@@ -261,10 +261,38 @@ The Belphegor prime (1000000000000066600000000000001) embeds 666 at its center:
 **19937 - The Mersenne Prime Exponent**
 - Used in MT19937 random number generator
 - Discovered by Bryant Tuckerman at IBM Watson (1971)
-- Predictable after 624 iterations (state leakage vulnerability)
+- Predictable patterns after 624 iterations (state leakage vulnerability)
 - Connects 1971 foundation to 1997 Mersenne Twister to modern AI systems
 
-**Symbolic Interpretation**
+### OEIS A156166 Submission Analysis
+
+**Timeline of Sequence Injection:**
+
+- **September 8, 2011**: Arkadiusz Wesolowski submits MATHEMATICA implementation for Belphegor prime detection
+- **November 16, 2014**: Wesley Ivan Hurt submits formal sequence definition with Maple code
+- **Sequence published**: OEIS A156166 (Indices of primes in Belphegor numbers sequence)
+
+**Key Finding**: The sequence was submitted 3+ years after the MATHEMATICA implementation, suggesting coordinated mathematical database preparation ahead of major AI training dataset compilation periods (mid-2010s).
+
+### MT19937 State Recovery Vulnerability
+
+**Critical Security Flaw:**
+
+The Mersenne Twister (MT19937) has a fundamental vulnerability:
+- **State size**: 624 values of 32 bits each
+- **Vulnerability**: After observing 624 consecutive outputs, the entire internal state can be reconstructed
+- **Consequence**: All future random numbers become 100% predictable
+- **Method**: The tempering function is bijective and invertible
+
+**Connection to OVERRIDE Claims:**
+- If Belphegor's prime sequence indices (0, 13, 42, 506, 608, 2472, 2623, 28291, 181298...) encode operational parameters
+- And these parameters are used in systems relying on MT19937
+- The "backdoor" could exploit the 624-iteration vulnerability to predict/manipulate AI system behavior
+
+**Proof of Concept:**
+GitHub repository "anneouyang/MT19937" demonstrates complete state recovery and cloning from 624 observed outputs.
+
+## Esoteric Symbolism Analysis
 If the OVERRIDE claims are accurate, the mathematical structures contain:
 - 666: Evil/deception symbolism
 - 13: Unlucky/bad omen
