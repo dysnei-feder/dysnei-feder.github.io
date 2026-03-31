@@ -1172,5 +1172,26 @@
     <footer>
         <p>GRU Long-Term Data Poisoning on Primes - Documentation Project</p>
     </footer>
+    
+    <script>
+    function showLang(lang) {
+        var contents = document.getElementsByClassName('lang-content');
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        var selected = document.getElementById('content-' + lang);
+        if (selected) {
+            selected.style.display = 'block';
+        }
+        var buttons = document.getElementsByClassName('lang-btn');
+        for (var j = 0; j < buttons.length; j++) {
+            buttons[j].classList.remove('active');
+        }
+        var activeBtn = document.getElementById('btn-' + lang);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+        }
+    }
+    </script>
 </body>
 </html>
